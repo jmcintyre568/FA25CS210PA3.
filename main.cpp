@@ -172,7 +172,7 @@ bool dfs(int r, int c,
 // ----------------------------------------------------------
 int main() {
     int N, M;
-
+    cout << "  ==Jasper M DFS Maze==\n";
     cout << "Enter maze dimensions N M: ";
     cin >> N >> M;
 
