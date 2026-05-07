@@ -175,6 +175,7 @@ int main() {
     cout << "  ==Jasper M DFS Maze==\n";
     cout << "Enter maze dimensions N M: ";
     cin >> N >> M;
+    cout << "\n 0 = open space, 1 = wall, S = start, E = end";
 
     vector<vector<int>> maze(N, vector<int>(M));
     generateMaze(maze, N, M);
@@ -210,6 +211,7 @@ int main() {
     // STUDENT WORK:
     // If found, print the path
     // ------------------------------------------------------
+    //
      if (found) {
          printPath(exitcell, parent_r, parent_c, ent_r, ent_c);
      } else {
