@@ -75,7 +75,9 @@ void printMaze(const vector<vector<int>>& maze,
     int N = maze.size();
     int M = maze[0].size();
 
+
     cout << "\nMaze:\n";
+
     for (int r = 0; r < N; r++) {
         for (int c = 0; c < M; c++) {
             if (r == ent_r && c == ent_c) {
@@ -142,12 +144,13 @@ bool dfs(int r, int c,
         //visited current
         visited[r][c] = true;
 
-        //check for exit
+        //Recursive base case: check for exit
         if(r == exit_r && c == exit_c){
             return true;
         }
-        //check every direction
+        //check every direction (0 = up, 1 = right, 2 = down, 3 = left
         for(int i = 0; i < 4; i++){
+            //add direction offset from dr and dc to r and c
             int rNew = r + dr[i];
             int cNew = c + dc[i];
 
@@ -175,7 +178,7 @@ int main() {
     cout << "  ==Jasper M DFS Maze==\n";
     cout << "Enter maze dimensions N M: ";
     cin >> N >> M;
-    cout << "\n 0 = open space, 1 = wall, S = start, E = end";
+
 
     vector<vector<int>> maze(N, vector<int>(M));
     generateMaze(maze, N, M);
