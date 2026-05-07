@@ -155,7 +155,7 @@ bool dfs(int r, int c,
             int cNew = c + dc[i];
 
             //set parent neighbor to current if not a wall out of bounds or visited before recursing 
-            if(rNew >=0 && cNew >= 0 && rNew < N && cNew < M && maze[rNew][cNew] == 0){
+            if(maze[rNew][cNew] == 0 && !visited[rNew][cNew]){
                 parent_r[rNew][cNew] = r;
                 parent_c[rNew][cNew] = c;
                 //return true if recursive call returns true
