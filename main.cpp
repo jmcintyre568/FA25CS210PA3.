@@ -199,6 +199,8 @@ int main() {
     int exit_r = exitcell.first;
     int exit_c = exitcell.second;
 
+    //output key
+    cout << "S = start, E = end, 0 = open space, 1 = wall\n";
     // Display the maze
     printMaze(maze, ent_r, ent_c, exit_r, exit_c);
 
